@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Send } from 'lucide-react';
+import Navbar from './Components/Navbar';
 
 const StarknetAgent: React.FC = () => {
   const [input, setInput] = useState<string>('');
@@ -187,7 +188,10 @@ const StarknetAgent: React.FC = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-gray-100 flex items-center justify-center p-4">
+      
       <div className="w-full max-w-3xl bg-gray-800/50 backdrop-blur-lg rounded-2xl shadow-2xl p-6 space-y-6">
         <div className="flex items-center gap-4 border-b border-gray-700 pb-4">
           <img
@@ -241,6 +245,7 @@ const StarknetAgent: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
