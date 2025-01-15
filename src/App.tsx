@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Send } from 'lucide-react';
 import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 const StarknetAgent: React.FC = () => {
   const [input, setInput] = useState<string>('');
@@ -245,6 +246,7 @@ const StarknetAgent: React.FC = () => {
         </div>
       </div>
     </div>
+    <Footer/>
     </>
   );
 };
