@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-900 text-white px-4 py-4 shadow-md fixed top-0 left-0 right-0 z-50">
+    <nav className="bg-[#20232a] text-[#ffffff] px-4 py-4 shadow-md fixed top-0 left-0 right-0 z-50 mb-8">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img
@@ -30,7 +30,7 @@ const Navbar = () => {
           <li>
             <a
               href="#features"
-              className="hover:text-blue-400 transition"
+              className="hover:text-accent transition"
               onClick={handleMenuClick}
             >
               Features
@@ -39,7 +39,7 @@ const Navbar = () => {
           <li>
             <a
               href="#about"
-              className="hover:text-blue-400 transition"
+              className="hover:text-accent transition"
               onClick={handleMenuClick}
             >
               About
@@ -48,7 +48,7 @@ const Navbar = () => {
           <li>
             <a
               href="#contact"
-              className="hover:text-blue-400 transition"
+              className="hover:text-accent transition"
               onClick={handleMenuClick}
             >
               Contact
@@ -88,12 +88,12 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-800 absolute top-full left-0 w-full shadow-md">
+        <div className="md:hidden bg-[#20232a] absolute top-full left-0 w-full shadow-md">
           <ul className="flex flex-col items-center gap-4 py-4">
             <li>
               <a
                 href="#features"
-                className="hover:text-blue-400 transition"
+                className="hover:text-accent transition"
                 onClick={handleMenuClick}
               >
                 Features
@@ -102,7 +102,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#about"
-                className="hover:text-blue-400 transition"
+                className="hover:text-accent transition"
                 onClick={handleMenuClick}
               >
                 About
@@ -111,7 +111,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#contact"
-                className="hover:text-blue-400 transition"
+                className="hover:text-accent transition"
                 onClick={handleMenuClick}
               >
                 Contact
