@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 type Message = {
   text: string;
@@ -36,12 +36,12 @@ const Chat = () => {
     
 
     <div className="flex justify-center items-center min-h-screen bg-gray-500 py-20">
-  <div className="chat-container w-full max-w-[50%] flex flex-col items-center bg-gray-300 p-4 rounded-lg shadow-lg">
-    <div className="h-screen overflow-y-auto mb-4 w-full">
+  <div className="chat-container w-full  max-w-[50%] flex flex-col items-center bg-gray-300 p-4 rounded-lg shadow-lg">
+    <div className="h-screen overflow-y-auto mb-4 w-full ml-16">
       {messages.map((msg, index) => (
         <div
           key={index}
-          className={`message ${msg.sender === 'user' ? 'user-message' : 'ai-message'} p-2 mb-2 rounded ${
+          className={`message ${msg.sender === 'user' ? 'user-message' : 'ai-message'} p-2  mb-2 rounded ${
             msg.sender === 'user' ? 'bg-blue-100 text-blue-800' : 'bg-gray-200 text-gray-800'
           }`}
         >
@@ -72,7 +72,7 @@ const Chat = () => {
         placeholder="Type your message..."
         maxLength={maxChars}
       />
-      <button className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600" onClick={handleSend}>
+      <button className="bg-blue-500 text-white p-4 rounded-lg hover:bg-blue-600" onClick={handleSend}>
         Send
       </button>
     </div>
