@@ -32,6 +32,11 @@ const Chat = () => {
     }
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      handleSend();
+    }
+  };
   return (
     
 
@@ -69,6 +74,7 @@ const Chat = () => {
           setInput(e.target.value);
           setCharCount(e.target.value.length);
         }}
+        onKeyDown={handleKeyDown}
         placeholder="Type your message..."
         maxLength={maxChars}
       />
